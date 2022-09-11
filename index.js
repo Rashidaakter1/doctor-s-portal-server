@@ -66,7 +66,7 @@ async function run() {
     });
     app.get("/tools", async (req, res) => {
       const result = await toolCollection.find().toArray();
-      res.send(result);
+      res.json(result);
     });
 
     app.get("/users", verifyJWT, async (req, res) => {
