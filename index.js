@@ -65,6 +65,7 @@ async function run() {
       res.send(result);
     });
     app.get("/tools", async (req, res) => {
+      console.log(req)
       const result = await toolCollection.find().toArray();
       res.json(result);
     });
